@@ -2,6 +2,7 @@ const express = require("express");
 const bots = require("./src/botsData");
 const shuffle = require("./src/shuffle");
 
+
 const playerRecord = {
   wins: 0,
   losses: 0,
@@ -9,6 +10,7 @@ const playerRecord = {
 const app = express();
 
 app.use(express.json());
+app.use(express.static(__dirname + '/public'));
 
 app.get('')
 // Add up the total health of all the robots
